@@ -17,7 +17,12 @@ jobs:
       
     - name: Start Docker Compose
       run: docker-compose up -d
-    
+    - name: Start Docker Compose
+      run: |
+        docker-compose up -d
+        docker-compose ps
+        ls -l  # Listet Dateien im aktuellen Verzeichnis auf, um zu überprüfen, ob index.html erstellt wurde
+
     - name: Commit index.html changes
       run: |
         git config --global user.name 'GitHub Actions'
