@@ -2,8 +2,8 @@ name: Docker Compose Workflow
 
 on:
   schedule:
-    # Ausführen jede Minute
-    - cron: '*/1 * * * *'
+    - cron: '*/5 * * * *'  # Beachten Sie, dass GitHub eine Mindestfrequenz von 5 Minuten für cron Jobs hat
+  workflow_dispatch:
 
 jobs:
   docker-compose-up:
